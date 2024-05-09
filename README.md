@@ -97,3 +97,21 @@ docker run --rm -e AWS_REGION=<will be provided> -e AWS_ACCESS_KEY_ID=<will be p
 
 docker run --rm -e AWS_REGION=<will be provided> -e AWS_ACCESS_KEY_ID=<will be provided> -e AWS_SECRET_ACCESS_KEY=<will be provided> ndjsonfilter:v1 -input s3://ndjson-bucket/100000.ndjson.gz -from-time 1970-02-02T11:2:32.102118268-07:00 -to-time 2002-02-02T11:32:32.102118268-07:00 -with-word titans -with-id 3516453660759435053
 ```
+
+## User Permissions
+
+```json
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Sid": "VisualEditor0",
+			"Effect": "Allow",
+			"Action": 
+				"s3:GetObject",
+			"Resource": 
+				"arn:aws:s3:::ndjson-bucket/*"
+		}
+	]
+}
+```
