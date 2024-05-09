@@ -56,7 +56,7 @@ If no `-input` flag is present, the utility will print a usage message and exit 
 ## Examples
 Docker command:
 ```bash
-docker run --rm -e AWS_REGION=<will be provided> -e AWS_ACCESS_KEY_ID=<will be provided> -e AWS_SECRET_ACCESS_KEY=<will be provided> -input s3://ndjson-bucket/1000.ndjson.gz -from-time=2000-02-02T13:20:40 -to-time=2004-01-01T00:00:00
+docker run --rm -e AWS_REGION=<will be provided> -e AWS_ACCESS_KEY_ID=<will be provided> -e AWS_SECRET_ACCESS_KEY=<will be provided> -input s3://ndjson-bucket/1000.ndjson.gz -from-time=2000-01-02T13:20:40 -to-time=2004-01-01T00:00:00
 ```
 Output:
 ```bash
@@ -69,7 +69,7 @@ Output:
 {6013077318414246325 2000-05-10T06:47:15 [postages scratchboard rondos downbeats debunks]}
 {4518711722961714278 2000-05-07T20:33:32 [casualties boracic touted ascidium asocial]}
 {3570732578126078709 2000-10-15T00:06:17 [rubricator babool]}
-{8135075639657369229 2000-07-17T21:33:31 [antecedence bilharzias nodular ergots cholestyramines]}
+{8135075639657369229 2003-07-17T21:33:31 [antecedence bilharzias nodular ergots cholestyramines]}
 
 ```
 ## Environment
