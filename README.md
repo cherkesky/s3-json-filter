@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/cherkesky/inmemcache/master/logo.png" height="250" width="250">
+<img src="https://raw.githubusercontent.com/cherkesky/ndjson-filter/master/logo.png" height="250" width="400">
 
 
 ## by Guy Cherkesky | [LinkedIn](http://linkedin.com/in/cherkesky) | [Website](http://cherkesky.com)
@@ -28,7 +28,7 @@ Some examples of data:
 {"id": 4834718291991736770, "time": "2000-08-28T20:34:34", "words": ["nonplanar", "formee", "wavier", "haunches"]}
 ```
 
-The objects in S3 are GZIP compressed, and can be arbitrarily large up to the S3 size limit (5 TiB).
+The objects in S3 are GZIP compressed.
 
 ## S3 Inputs
 
@@ -41,7 +41,7 @@ The objects in S3 are GZIP compressed, and can be arbitrarily large up to the S3
 
 ## Flags
 
-The utility that you develop must support the following flags:
+The utility supports the following flags:
 
 | Name | Required | Description |
 | ---- | -------- | ----------- |
