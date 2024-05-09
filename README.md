@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/cherkesky/ndjson-filter/master/logo.png" height="250" width="400">
+<img src="https://raw.githubusercontent.com/cherkesky/ndjson-filter/master/assets/logo.png" height="250" width="400">
 
 
 ## by Guy Cherkesky | [LinkedIn](http://linkedin.com/in/cherkesky) | [Website](http://cherkesky.com)
