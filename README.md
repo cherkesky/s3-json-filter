@@ -51,7 +51,7 @@ The utility supports the following flags:
 | `-to-time` | No | An RFC3339 timestamp that represents the latest `time` of JSON object to be selected. |
 | `-with-word` | No | A string containing a word that must be contained in `words` of a JSON objec to be selected. |
 
-If no `-input` flag is present, the utility should print a usage message and exit with a non-zero status. If only the `-input` flag is present, the output of the S3 object should be written to `stdout`. The `-with-id` flag should select only JSON objects that have the specified `id` field. The `-from-time` flag should select only objects with `time` fields greater than or equal to the specified value. The `-to-time` flag should select only objects with `time` fields less than the specified value. Finally, the `-with-word` flag should select only object where the `words` array contains the specified word. If multiple filtering flags are provided, the conjunction (AND) of the conditions should be applied.
+If no `-input` flag is present, the utility will print a usage message and exit with a non-zero status. If only the `-input` flag is present, the output of the S3 object will be written to `stdout`. The `-with-id` flag will select only JSON objects that have the specified `id` field. The `-from-time` flag will select only objects with `time` fields greater than or equal to the specified value. The `-to-time` flag will select only objects with `time` fields less than the specified value. Finally, the `-with-word` flag will select only object where the `words` array contains the specified word. If multiple filtering flags are provided, the conjunction (AND) of the conditions will be applied.
 
 ## Examples
 Docker command:
@@ -89,11 +89,11 @@ docker build -t ndjsonfilter:v1 .
 
 Run examples:
 ```bash
-docker run --rm -e AWS_REGION=<will be provided> -e AWS_ACCESS_KEY_ID=<will be provided> -e AWS_SECRET_ACCESS_KEY=<will be provided> ndjsonfilter:v1 -input s3://ndjson-bucket/1M.ndjson.gz -with-word titans
+docker run --rm -e AWS_REGION=<will be provided> -e AWS_ACCESS_KEY_ID=<will be provided> -e AWS_SECRET_ACCESS_KEY=<will be provided> ndjsonfilter:v1 -input s3://ndjson-bucket/100000.ndjson.gz -with-word titans
 
-docker run --rm -e AWS_REGION=<will be provided> -e AWS_ACCESS_KEY_ID=<will be provided> -e AWS_SECRET_ACCESS_KEY=<will be provided> ndjsonfilter:v1 -input s3://ndjson-bucket/1M.ndjson.gz -to-time 1990-02-02T11:32:32.102118268-07:00 -with-word titans
+docker run --rm -e AWS_REGION=<will be provided> -e AWS_ACCESS_KEY_ID=<will be provided> -e AWS_SECRET_ACCESS_KEY=<will be provided> ndjsonfilter:v1 -input s3://ndjson-bucket/100000.ndjson.gz -to-time 2002-02-02T11:32:32.102118268-07:00 -with-word titans
 
-docker run --rm -e AWS_REGION=<will be provided> -e AWS_ACCESS_KEY_ID=<will be provided> -e AWS_SECRET_ACCESS_KEY=<will be provided> ndjsonfilter:v1 -input s3://ndjson-bucket/1M.ndjson.gz -from-time 1970-02-02T11:32:32.102118268-07:00 -to-time 1980-02-02T11:32:32.102118268-07:00 -with-word titans
+docker run --rm -e AWS_REGION=<will be provided> -e AWS_ACCESS_KEY_ID=<will be provided> -e AWS_SECRET_ACCESS_KEY=<will be provided> ndjsonfilter:v1 -input s3://ndjson-bucket/100000.ndjson.gz -from-time 1970-02-02T11:32:32.102118268-07:00 -to-time 2002-02-02T11:32:32.102118268-07:00 -with-word titans
 
-docker run --rm -e AWS_REGION=<will be provided> -e AWS_ACCESS_KEY_ID=<will be provided> -e AWS_SECRET_ACCESS_KEY=<will be provided> ndjsonfilter:v1 -input s3://ndjson-bucket/1M.ndjson.gz -from-time 1970-02-02T11:2:32.102118268-07:00 -to-time 2022-02-02T11:32:32.102118268-07:00 -with-word titans -with-id 4151711053299985798
+docker run --rm -e AWS_REGION=<will be provided> -e AWS_ACCESS_KEY_ID=<will be provided> -e AWS_SECRET_ACCESS_KEY=<will be provided> ndjsonfilter:v1 -input s3://ndjson-bucket/100000.ndjson.gz -from-time 1970-02-02T11:2:32.102118268-07:00 -to-time 2002-02-02T11:32:32.102118268-07:00 -with-word titans -with-id 3516453660759435053
 ```
