@@ -34,10 +34,10 @@ The objects in S3 are GZIP compressed.
 
 | S3 URI | Number of JSON |
 | ------ | -------------- |
-| s3://s3://ndjson-bucket/1.ndjson.gz | 1000 |
-| s3://s3://ndjson-bucket/100.ndjson.gz | 10000 |
-| s3://s3://ndjson-bucket/1000.ndjson.gz | 100000 |
-| s3://s3://ndjson-bucket/100000.ndjson.gz | 1000000 |
+| s3://s3://ndjson-bucket/1.ndjson.gz | 1 |
+| s3://s3://ndjson-bucket/100.ndjson.gz | 100 |
+| s3://s3://ndjson-bucket/1000.ndjson.gz | 1000 |
+| s3://s3://ndjson-bucket/100000.ndjson.gz | 100000 |
 
 ## Flags
 
