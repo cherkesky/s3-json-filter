@@ -43,11 +43,9 @@ func main() {
 	svc := createSession()
 
 	resp := getObject(bucket, key, svc)
-
 	defer resp.Body.Close()
 
 	gz := decompress(resp.Body)
-
 	defer gz.Close()
 
 	scanner := bufio.NewScanner(gz)
@@ -178,6 +176,7 @@ func processLine(line string, filterMap map[string]func(JsonResponse, string) bo
 	for filter := range filterMap {
 		if !filterMap[filter](jsonResponse, getFlagValue(filter)) {
 			hasAllFlags = false
+			break
 		}
 	}
 	if hasAllFlags {
